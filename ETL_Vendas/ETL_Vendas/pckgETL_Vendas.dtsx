@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="pckgETL_Vendas"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{E205B19F-DF26-4626-A6C0-B6ED9801EE34}">
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{232F52A3-3AA8-4B6A-B2CF-D21C44484B8E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -81,6 +81,15 @@
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="max_date">
+      <DTS:VariableValue
+        DTS:DataType="7">1/1/2000</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{114E1177-B01D-41A5-BE00-CA0EE33CF62F}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="max_datel">
       <DTS:VariableValue
         DTS:DataType="7">1/1/2000</DTS:VariableValue>
     </DTS:Variable>
@@ -3924,16 +3933,20 @@ from vendedor v inner join loja I on I.cod_loja = v.cod_loja</property>
                   expressionType="Notify"
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select id_produto, cod_produto from
+
 dim_produto
-where status_produto = 'Current'</property>
+
+where status_produto = 'Atual'</property>
                 <property
                   dataType="System.String"
                   description="Especifica uma instrução SQL que usa parâmetros para gerar a tabela de pesquisa."
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select id_produto, cod_produto from
+
 dim_produto
-where status_produto = 'Current') [refTable]
+
+where status_produto = 'Atual') [refTable]
 where [refTable].[cod_produto] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -4085,14 +4098,18 @@ where [refTable].[cod_produto] = ?</property>
                   description="Especifica a instrução SQL que gera a tabela de pesquisa."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select id_data, data from
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select id_data, data 
+from
+
 dim_tempo</property>
                 <property
                   dataType="System.String"
                   description="Especifica uma instrução SQL que usa parâmetros para gerar a tabela de pesquisa."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select id_data, data from
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select id_data, data 
+from
+
 dim_tempo) [refTable]
 where [refTable].[data] = ?</property>
                 <property
@@ -4246,16 +4263,20 @@ where [refTable].[data] = ?</property>
                   expressionType="Notify"
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select id_vendedor, cod_vendedor
+
 from dim_vendedor
-where status_vendedor = 'Current'</property>
+
+where status_vendedor = 'Atual'</property>
                 <property
                   dataType="System.String"
                   description="Especifica uma instrução SQL que usa parâmetros para gerar a tabela de pesquisa."
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select id_vendedor, cod_vendedor
+
 from dim_vendedor
-where status_vendedor = 'Current') [refTable]
+
+where status_vendedor = 'Atual') [refTable]
 where [refTable].[cod_vendedor] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -4408,16 +4429,20 @@ where [refTable].[cod_vendedor] = ?</property>
                   expressionType="Notify"
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select id_loja, cod_loja 
-from dim_loja
-where status_loja = 'Current'</property>
+
+from dim_loja 
+
+where status_loja = 'Atual'</property>
                 <property
                   dataType="System.String"
                   description="Especifica uma instrução SQL que usa parâmetros para gerar a tabela de pesquisa."
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select id_loja, cod_loja 
-from dim_loja
-where status_loja = 'Current') [refTable]
+
+from dim_loja 
+
+where status_loja = 'Atual') [refTable]
 where [refTable].[cod_loja] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -5023,7 +5048,7 @@ v.cod_vendedor where data_venda &gt; ?</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Restrição 3]"
       DTS:CreationName=""
-      DTS:DTSID="{5EAD1C13-EE70-4620-9016-22750145C83C}"
+      DTS:DTSID="{E5315221-AFB5-4A66-A54F-7C5E7B3D744A}"
       DTS:From="Package\SQL_MAX_DATA_VENDA"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restrição 3"
@@ -5213,40 +5238,6 @@ v.cod_vendedor where data_venda &gt; ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Restrição 3]"
-          TopLeft="403,352">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-152,57"
-              Start="0,0"
-              End="-144.5,57">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-72,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-72,0"
-                    Point2="-76,0"
-                    Point3="-76,4" />
-                  <mssgle:LineSegment
-                    End="-76,53" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-76,53"
-                    Point2="-76,57"
-                    Point3="-80,57" />
-                  <mssgle:LineSegment
-                    End="-144.5,57" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição 4]"
           TopLeft="444,93">
           <EdgeLayout.Curve>
@@ -5412,6 +5403,40 @@ v.cod_vendedor where data_venda &gt; ?</property>
             <mssgm:EdgeLabel
               BoundingBox="-36.358359375,-79.9557195571956,24.21671875,9.7490234375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restrição 3]"
+          TopLeft="403,352">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-152,57"
+              Start="0,0"
+              End="-144.5,57">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-72,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-72,0"
+                    Point2="-76,0"
+                    Point3="-76,4" />
+                  <mssgle:LineSegment
+                    End="-76,53" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-76,53"
+                    Point2="-76,57"
+                    Point3="-80,57" />
+                  <mssgle:LineSegment
+                    End="-144.5,57" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6421,7 +6446,7 @@ v.cod_vendedor where data_venda &gt; ?</property>
         <NodeLayout
           Size="147,42"
           Id="Package\DFT_FACT_VENDAS\LKP_DM_LOJA"
-          TopLeft="306,142" />
+          TopLeft="306,144" />
         <NodeLayout
           Size="176,42"
           Id="Package\DFT_FACT_VENDAS\LKP_DIM_PRODUTO"
@@ -6434,42 +6459,6 @@ v.cod_vendedor where data_venda &gt; ?</property>
           Size="234,42"
           Id="Package\DFT_FACT_VENDAS\OLE_DST_INSERT_FACT_VENDA"
           TopLeft="287.5,541.5" />
-        <EdgeLayout
-          Id="Package\DFT_FACT_VENDAS.Paths[Saída de Origem OLE DB]"
-          TopLeft="175,102">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="204.5,40"
-              Start="0,0"
-              End="204.5,32.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16"
-                    Point2="0,20"
-                    Point3="4,20" />
-                  <mssgle:LineSegment
-                    End="200.5,20" />
-                  <mssgle:CubicBezierSegment
-                    Point1="200.5,20"
-                    Point2="204.5,20"
-                    Point3="204.5,24" />
-                  <mssgle:LineSegment
-                    End="204.5,32.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT_FACT_VENDAS.Paths[Saída de Correspondência de Pesquisa3]"
           TopLeft="230,516">
@@ -6580,38 +6569,72 @@ v.cod_vendedor where data_venda &gt; ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT_FACT_VENDAS.Paths[Saída de Correspondência de Pesquisa]"
-          TopLeft="379.5,184">
+          TopLeft="379.5,186">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-213.5,71"
+              EndConnector="-213.5,69"
               Start="0,0"
-              End="-213.5,63.5">
+              End="-213.5,61.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.5" />
+                    End="0,30.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,31.5"
-                    Point2="0,35.5"
-                    Point3="-4,35.5" />
+                    Point1="0,30.5"
+                    Point2="0,34.5"
+                    Point3="-4,34.5" />
                   <mssgle:LineSegment
-                    End="-209.5,35.5" />
+                    End="-209.5,34.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="-209.5,35.5"
-                    Point2="-213.5,35.5"
-                    Point3="-213.5,39.5" />
+                    Point1="-209.5,34.5"
+                    Point2="-213.5,34.5"
+                    Point3="-213.5,38.5" />
                   <mssgle:LineSegment
-                    End="-213.5,63.5" />
+                    End="-213.5,61.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-192.1240234375,40.5,170.748046875,12.1953125"
+              BoundingBox="-192.1240234375,39.5,170.748046875,12.1953125"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_FACT_VENDAS.Paths[Saída de Origem OLE DB]"
+          TopLeft="175,102">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="204.5,42"
+              Start="0,0"
+              End="204.5,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17"
+                    Point2="0,21"
+                    Point3="4,21" />
+                  <mssgle:LineSegment
+                    End="200.5,21" />
+                  <mssgle:CubicBezierSegment
+                    Point1="200.5,21"
+                    Point2="204.5,21"
+                    Point3="204.5,25" />
+                  <mssgle:LineSegment
+                    End="204.5,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6631,7 +6654,7 @@ v.cod_vendedor where data_venda &gt; ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -6641,7 +6664,7 @@ v.cod_vendedor where data_venda &gt; ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6654,7 +6677,7 @@ v.cod_vendedor where data_venda &gt; ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -6664,7 +6687,7 @@ v.cod_vendedor where data_venda &gt; ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6677,7 +6700,7 @@ v.cod_vendedor where data_venda &gt; ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -6687,7 +6710,7 @@ v.cod_vendedor where data_venda &gt; ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6700,7 +6723,7 @@ v.cod_vendedor where data_venda &gt; ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -6710,7 +6733,7 @@ v.cod_vendedor where data_venda &gt; ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
