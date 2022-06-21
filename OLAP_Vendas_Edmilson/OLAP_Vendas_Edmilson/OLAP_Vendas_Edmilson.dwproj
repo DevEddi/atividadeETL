@@ -6,10 +6,67 @@
     <Name>OLAP_Vendas_Edmilson.database</Name>
     <FullPath>OLAP_Vendas_Edmilson.database</FullPath>
   </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>Cubo_Vendas.cube</Name>
+      <FullPath>Cubo_Vendas.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Cubo_Vendas.partitions</Name>
+          <FullPath>Cubo_Vendas.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
+  <Dimensions>
+    <ProjectItem>
+      <Name>Dim Tempo.dim</Name>
+      <FullPath>Dim Tempo.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Loja.dim</Name>
+      <FullPath>Dim Loja.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Vendedor.dim</Name>
+      <FullPath>Dim Vendedor.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Produto.dim</Name>
+      <FullPath>Dim Produto.dim</FullPath>
+    </ProjectItem>
+  </Dimensions>
+  <DataSources>
+    <ProjectItem>
+      <Name>Dm_Vendas.ds</Name>
+      <FullPath>Dm_Vendas.ds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSourceViews>
+    <ProjectItem>
+      <Name>dtsrcvws_Vendas.dsv</Name>
+      <FullPath>dtsrcvws_Vendas.dsv</FullPath>
+    </ProjectItem>
+  </DataSourceViews>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
-      <Options />
+      <Options>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>Dm_Vendas</Id>
+            <Name>Dm_Vendas</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=DESKTOP-TF537HP\MSSQLSERVER2;Integrated Security=SSPI;Initial Catalog=dmVendas</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>Dm_Vendas</Id>
+            <Name>Dm_Vendas</Name>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
+      </Options>
     </Configuration>
   </Configurations>
 </Project>
