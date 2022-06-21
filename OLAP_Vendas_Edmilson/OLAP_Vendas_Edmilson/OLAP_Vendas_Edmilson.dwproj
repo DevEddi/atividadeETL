@@ -20,20 +20,20 @@
   </Cubes>
   <Dimensions>
     <ProjectItem>
-      <Name>Dim Tempo.dim</Name>
-      <FullPath>Dim Tempo.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Dim Loja.dim</Name>
-      <FullPath>Dim Loja.dim</FullPath>
+      <Name>Dim Produto.dim</Name>
+      <FullPath>Dim Produto.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Dim Vendedor.dim</Name>
       <FullPath>Dim Vendedor.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Dim Produto.dim</Name>
-      <FullPath>Dim Produto.dim</FullPath>
+      <Name>Dim Loja.dim</Name>
+      <FullPath>Dim Loja.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Tempo.dim</Name>
+      <FullPath>Dim Tempo.dim</FullPath>
     </ProjectItem>
   </Dimensions>
   <DataSources>

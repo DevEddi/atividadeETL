@@ -26,42 +26,42 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>r22B0sumpAlvSRp8G0GnvsGRssw=21/06/2022 10:27:0721/06/2022 10:27:06</TimeStamp>
+        <TimeStamp>yJRUFI0AYpraVRKtFhBHYZobWFs=21/06/2022 13:08:4021/06/2022 10:27:06</TimeStamp>
         <ID>
           <String>dtsrcvws_Vendas</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>8rXkdTrezYqyf3+rynu6CUxRI6Y=21/06/2022 10:42:4921/06/2022 10:29:29</TimeStamp>
+        <TimeStamp>A1gxRpNf/NX0PVl0loLh4GaMuGo=21/06/2022 12:21:5421/06/2022 12:06:09</TimeStamp>
         <ID>
-          <String>Dim Tempo</String>
+          <String>Dim Produto</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>rMKksCMGkp6HTpGilULxlDdskTo=21/06/2022 10:46:2821/06/2022 10:29:30</TimeStamp>
-        <ID>
-          <String>Dim Loja</String>
-        </ID>
-      </ObjectSnapshot>
-      <ObjectSnapshot>
-        <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>EjCfZxL5z4zv7a02qMpdqf6Pcoo=21/06/2022 10:49:0021/06/2022 10:29:30</TimeStamp>
+        <TimeStamp>JOAKgEYZI0+5wO2yBxwgovcGE6A=21/06/2022 12:21:5421/06/2022 12:06:09</TimeStamp>
         <ID>
           <String>Dim Vendedor</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>gjLfGAfjUsbUC5vVeRraldKfcNM=21/06/2022 10:49:0021/06/2022 10:29:30</TimeStamp>
+        <TimeStamp>iYpSLtWNdqhqmL2PZzuHgRmM+z0=21/06/2022 12:18:3921/06/2022 12:06:09</TimeStamp>
         <ID>
-          <String>Dim Produto</String>
+          <String>Dim Loja</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>8VGkFAfU+jGf2WbIaFLlYoeQpwk=21/06/2022 12:13:4421/06/2022 12:06:09</TimeStamp>
+        <ID>
+          <String>Dim Tempo</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>HBlkTRb7nIIOqicouqLSasMlvSQ=21/06/2022 10:49:0021/06/2022 10:29:29xzUyERe/EaNOtXMS2VwLpoAfjyc=21/06/2022 10:29:3021/06/2022 10:29:29</TimeStamp>
+        <TimeStamp>BGnKpjAda7EHqZ2nN1eGDMuQyQ0=21/06/2022 13:10:5721/06/2022 12:06:09nM/1D6MF9okfiERyf5X6IoK7SeY=21/06/2022 12:06:0921/06/2022 12:06:09</TimeStamp>
         <ID>
           <String>Cubo_Vendas</String>
         </ID>
@@ -78,5 +78,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>false</ProcessingComplete>
-  <LastDeployed>2022-06-21T13:50:00.24Z</LastDeployed>
+  <LastDeployed>2022-06-21T16:11:28.92Z</LastDeployed>
 </DeploymentSnapshot>

@@ -12,16 +12,16 @@
     </DataSources>
     <Dimensions>
       <Dimension>
-        <ID>Dim Tempo</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Dim Loja</ID>
+        <ID>Dim Produto</ID>
       </Dimension>
       <Dimension>
         <ID>Dim Vendedor</ID>
       </Dimension>
       <Dimension>
-        <ID>Dim Produto</ID>
+        <ID>Dim Loja</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Tempo</ID>
       </Dimension>
     </Dimensions>
     <Cubes>
