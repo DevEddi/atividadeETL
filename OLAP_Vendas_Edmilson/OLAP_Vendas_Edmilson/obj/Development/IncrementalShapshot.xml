@@ -54,7 +54,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>8VGkFAfU+jGf2WbIaFLlYoeQpwk=21/06/2022 12:13:4421/06/2022 12:06:09</TimeStamp>
+        <TimeStamp>gDkClDU0ZZz0a2I+h7qvz6N9iQU=22/06/2022 11:09:4621/06/2022 12:06:09</TimeStamp>
         <ID>
           <String>Dim Tempo</String>
         </ID>
@@ -77,6 +77,6 @@
     <Granularity>Coarse</Granularity>
   </Snapshot>
   <AssemblyLocations />
-  <ProcessingComplete>false</ProcessingComplete>
-  <LastDeployed>2022-06-21T16:54:19.88Z</LastDeployed>
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2022-06-22T14:10:03.253333Z</LastDeployed>
 </DeploymentSnapshot>
