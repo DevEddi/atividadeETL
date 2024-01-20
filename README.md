@@ -1,4 +1,4 @@
-# ENTREGA PARTE FINAL DO ESTUDO DE CASO - COM APRESENTAÇÃO
+# DELIVERY FINAL PART OF THE CASE STUDY - WITH PRESENTATION
 
 🎓 College: [Faculdade Metodista Granbery](http://granbery.edu.br/)
 
